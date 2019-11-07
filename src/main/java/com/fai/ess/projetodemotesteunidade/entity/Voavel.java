@@ -11,6 +11,6 @@ package com.fai.ess.projetodemotesteunidade.entity;
  */
 public interface Voavel {
     
-    public void incrementaTempoVida(String hora, Integer ciclo, Integer dia);
+    public void atualizarTempodeVida(String hora, Integer ciclo, Integer dia);
     
 }

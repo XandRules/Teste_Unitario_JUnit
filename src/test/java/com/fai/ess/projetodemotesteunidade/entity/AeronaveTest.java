@@ -41,7 +41,7 @@ public class AeronaveTest {
         Integer dia = 30;
         Aeronave instance = new Aeronave(new ArrayList<>(),new ArrayList<>(),"","00:00",0,0,new Cliente("", ""));
         Aeronave result = new Aeronave(new ArrayList<>(),new ArrayList<>(),"","10:00",20,30,new Cliente("", ""));
-        instance.incrementaTempoVida(hora, ciclo, dia);
+        instance.atualizarTempodeVida(hora, ciclo, dia);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }

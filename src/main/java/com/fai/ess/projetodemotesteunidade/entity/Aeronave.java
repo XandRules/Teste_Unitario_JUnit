@@ -86,7 +86,7 @@ public class Aeronave extends BaseEntity implements Voavel {
     }
 
     @Override
-    public void incrementaTempoVida(String hora, Integer ciclo, Integer dia) {
+    public void atualizarTempodeVida(String hora, Integer ciclo, Integer dia) {
         Integer horasCalc = Integer.parseInt(this.horas.split(":")[0]);
         Integer minutosCalc = Integer.parseInt(this.horas.split(":")[1]);
         Integer horasI = horasCalc + Integer.parseInt(horas.split(":")[0]);

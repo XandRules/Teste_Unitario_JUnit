@@ -48,7 +48,7 @@ public class NaoCriticoTest {
         Integer dias = 0;
         NaoCritico instance = new NaoCritico("PN001", "SN001", "0:00", "TEST01", 0, 0);
         String expResultHoras = "110:00";        
-        instance.incrementaTempoVida(horas, ciclos, dias);        
+        instance.atualizarTempodeVida(horas, ciclos, dias);        
         assertEquals(expResultHoras, instance.getHoras());
     }
     
@@ -60,7 +60,7 @@ public class NaoCriticoTest {
         Integer dias = 0;
         NaoCritico instance = new NaoCritico("PN001", "SN001", "0:00", "TEST01", 10, 0);
         Integer expResultCiclos = 20;        
-        instance.incrementaTempoVida(horas, ciclos, dias);        
+        instance.atualizarTempodeVida(horas, ciclos, dias);        
         assertEquals(expResultCiclos, instance.getCiclos());
     }
     
@@ -72,7 +72,7 @@ public class NaoCriticoTest {
         Integer dias = 120;
         NaoCritico instance = new NaoCritico("PN001", "SN001", "0:00", "TEST01", 0, 0);
         Integer expResultDias = 120;        
-        instance.incrementaTempoVida(horas, ciclos, dias);        
+        instance.atualizarTempodeVida(horas, ciclos, dias);        
         assertEquals(expResultDias, instance.getDias());
     }
     

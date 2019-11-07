@@ -48,7 +48,7 @@ public class CriticoTest {
         Integer dias = 0;
         Critico instance = new Critico("PN001", "SN001", "0:00", "TEST01", 0, 0);
         String expResultHoras = "110:30";        
-        instance.incrementaTempoVida(horas, ciclos, dias);        
+        instance.atualizarTempodeVida(horas, ciclos, dias);        
         assertEquals(expResultHoras, instance.getHoras());
     }
     
@@ -60,7 +60,7 @@ public class CriticoTest {
         Integer dias = 0;
         Critico instance = new Critico("PN001", "SN001", "0:00", "TEST01", 10, 0);
         Integer expResultCiclos = 21;        
-        instance.incrementaTempoVida(horas, ciclos, dias);        
+        instance.atualizarTempodeVida(horas, ciclos, dias);        
         assertEquals(expResultCiclos, instance.getCiclos());
     }
     
@@ -72,7 +72,7 @@ public class CriticoTest {
         Integer dias = 120;
         Critico instance = new Critico("PN001", "SN001", "0:00", "TEST01", 0, 0);
         Integer expResultDias = 120;        
-        instance.incrementaTempoVida(horas, ciclos, dias);        
+        instance.atualizarTempodeVida(horas, ciclos, dias);        
         assertEquals(expResultDias, instance.getDias());
     }
     

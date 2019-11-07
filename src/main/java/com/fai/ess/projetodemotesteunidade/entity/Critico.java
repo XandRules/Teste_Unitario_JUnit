@@ -16,7 +16,7 @@ public class Critico extends Componente {
     }
 
     @Override
-    public void incrementaTempoVida(String horas, Integer ciclos, Integer dias) {
+    public void atualizarTempodeVida(String horas, Integer ciclos, Integer dias) {
         Integer ciclosAtual = getCiclos();
         Integer diasAtual = getDias();
         String horasAtual = getHoras();

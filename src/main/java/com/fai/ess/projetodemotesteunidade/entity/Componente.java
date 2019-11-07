@@ -78,7 +78,7 @@ public abstract class Componente extends BaseEntity implements Voavel{
     }
 
     
-    public void incrementaTempoVida(String horas, Integer ciclos, Integer dias) {
+    public void atualizarTempodeVida(String horas, Integer ciclos, Integer dias) {
       
         if (this.ciclos != null) {
             this.ciclos += ciclos;
