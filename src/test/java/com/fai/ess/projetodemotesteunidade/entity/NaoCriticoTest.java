@@ -20,40 +20,61 @@ public class NaoCriticoTest {
     
     public NaoCriticoTest() {
     }
-    
-    @BeforeAll
-    public static void setUpClass() {
-    }
-    
-    @AfterAll
-    public static void tearDownClass() {
-    }
-    
-    @BeforeEach
-    public void setUp() {
-    }
-    
-    @AfterEach
-    public void tearDown() {
-    }
+//    
+//    @BeforeAll
+//    public static void setUpClass() {
+//    }
+//    
+//    @AfterAll
+//    public static void tearDownClass() {
+//    }
+//    
+//    @BeforeEach
+//    public void setUp() {
+//    }
+//    
+//    @AfterEach
+//    public void tearDown() {
+//    }
 
     /**
      * Test of incrementaTempoVida method, of class NaoCritico.
      */
     @Test
-    public void testIncrementaTempoVida() {
+    public void testIncrementaTempoVidaPorHoras() {//Controlado por horas
         System.out.println("incrementarTempoVida");
-        String horas = "5:00";
-        Integer ciclos = 100;
-        Integer dias = 30;
-        NaoCritico instance = new NaoCritico("123", "ABC", "0:00", "TEST01", 0, 0);
-        String expResultHoras = "5:00";
-        Integer expResultCiclos = 100;
-        Integer expResultDias = 30;
-        instance.incrementaTempoVida(horas, ciclos, dias);
+        String horas = "110:00";
+        Integer ciclos = 0;
+        Integer dias = 0;
+        NaoCritico instance = new NaoCritico("PN001", "SN001", "0:00", "TEST01", 0, 0);
+        String expResultHoras = "110:00";        
+        instance.incrementaTempoVida(horas, ciclos, dias);        
         assertEquals(expResultHoras, instance.getHoras());
+    }
+    
+    @Test
+    public void testIncrementaTempoVidaPorCiclos() {//Controlado por ciclos
+        System.out.println("incrementarTempoVida");
+        String horas = "0:00";
+        Integer ciclos = 10;
+        Integer dias = 0;
+        NaoCritico instance = new NaoCritico("PN001", "SN001", "0:00", "TEST01", 10, 0);
+        Integer expResultCiclos = 20;        
+        instance.incrementaTempoVida(horas, ciclos, dias);        
         assertEquals(expResultCiclos, instance.getCiclos());
+    }
+    
+    @Test
+    public void testIncrementaTempoVidaPorDias() {//Controlado por ciclos
+        System.out.println("incrementarTempoVida");
+        String horas = "0:00";
+        Integer ciclos = 0;
+        Integer dias = 120;
+        NaoCritico instance = new NaoCritico("PN001", "SN001", "0:00", "TEST01", 0, 0);
+        Integer expResultDias = 120;        
+        instance.incrementaTempoVida(horas, ciclos, dias);        
         assertEquals(expResultDias, instance.getDias());
     }
+    
     
 }

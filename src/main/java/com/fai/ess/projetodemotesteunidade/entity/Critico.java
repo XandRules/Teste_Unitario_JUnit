@@ -21,17 +21,17 @@ public class Critico extends Componente {
         Integer diasAtual = getDias();
         String horasAtual = getHoras();
         
-        if (diasAtual != 0) {
+        if (dias != 0) {
             diasAtual += dias;
             setDias(diasAtual);
         }
         
-        if (ciclosAtual != 0) {
+        if (ciclos != 0) {
             ciclosAtual += ciclos + 1;
             setCiclos(ciclosAtual);
         }
 
-        if (horasAtual != null) {
+        if (horas != null) {
             Integer horasCalc = Integer.parseInt(horasAtual.split(":")[0]);
             Integer minutosCalc = Integer.parseInt(horasAtual.split(":")[1]);
 
