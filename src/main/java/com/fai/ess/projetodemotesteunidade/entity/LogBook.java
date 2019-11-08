@@ -17,14 +17,20 @@ public class LogBook extends BaseEntity{
     private String horasVoadas;
     private Integer ciclosVoador;
     private Integer diasVoados;
+    private Aeronave aeronave;
 
-    public LogBook(String data, Integer voo, String horasVoadas, Integer ciclosVoador, Integer diasVoados) {
+    public LogBook(String data, Integer voo, String horasVoadas, Integer ciclosVoador, Integer diasVoados, Aeronave aeronave) {
         this.data = data;
         this.voo = voo;
         this.horasVoadas = horasVoadas;
         this.ciclosVoador = ciclosVoador;
         this.diasVoados = diasVoados;
+        this.aeronave = aeronave;
         setId(++idNovo);
+        
+        if (aeronave != null) {
+            this.aeronave.atualizarTempodeVida(this.horasVoadas, this.ciclosVoador, this.diasVoados);
+        }
     }
 
     public static Integer getIdNovo() {

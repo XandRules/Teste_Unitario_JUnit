@@ -7,6 +7,7 @@ package com.fai.ess.projetodemotesteunidade.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  *
@@ -102,5 +103,56 @@ public class Aeronave extends BaseEntity implements Voavel {
 
         this.horas = horasI.toString() + ":" + minutosI.toString();
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.componenteList);
+        hash = 97 * hash + Objects.hashCode(this.loogBookList);
+        hash = 97 * hash + Objects.hashCode(this.prefixo);
+        hash = 97 * hash + Objects.hashCode(this.horas);
+        hash = 97 * hash + Objects.hashCode(this.ciclos);
+        hash = 97 * hash + Objects.hashCode(this.dias);
+        hash = 97 * hash + Objects.hashCode(this.dono);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Aeronave other = (Aeronave) obj;
+        if (!Objects.equals(this.prefixo, other.prefixo)) {
+            return false;
+        }
+        if (!Objects.equals(this.horas, other.horas)) {
+            return false;
+        }
+        if (!Objects.equals(this.componenteList, other.componenteList)) {
+            return false;
+        }
+        if (!Objects.equals(this.loogBookList, other.loogBookList)) {
+            return false;
+        }
+        if (!Objects.equals(this.ciclos, other.ciclos)) {
+            return false;
+        }
+        if (!Objects.equals(this.dias, other.dias)) {
+            return false;
+        }
+        if (!Objects.equals(this.dono, other.dono)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 
 }

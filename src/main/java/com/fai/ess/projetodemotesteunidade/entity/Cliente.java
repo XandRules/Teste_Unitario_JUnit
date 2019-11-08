@@ -5,6 +5,8 @@
  */
 package com.fai.ess.projetodemotesteunidade.entity;
 
+import java.util.List;
+
 /**
  *
  * @author Alexandre
@@ -14,6 +16,7 @@ public class Cliente extends BaseEntity {
     private static Integer idNovo = 0;
     String email;
     String nome;
+     private List<Aeronave> aeronaveList;
 
     public Cliente(String email, String nome) {
         setId(++idNovo);
@@ -37,12 +40,14 @@ public class Cliente extends BaseEntity {
         this.nome = nome;
     }
 
-    public long getId() {
-        return id;
+    public List<Aeronave> getAeronaveList() {
+        return aeronaveList;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setAeronaveList(List<Aeronave> aeronaveList) {
+        this.aeronaveList = aeronaveList;
     }
+    
+    
 
 }

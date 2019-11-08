@@ -5,6 +5,8 @@
  */
 package com.fai.ess.projetodemotesteunidade.entity;
 
+import java.util.Objects;
+
 /**
  *
  * @author Alexandre
@@ -104,5 +106,52 @@ public abstract class Componente extends BaseEntity implements Voavel{
         }
     
     }  
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + Objects.hashCode(this.pn);
+        hash = 31 * hash + Objects.hashCode(this.sn);
+        hash = 31 * hash + Objects.hashCode(this.horas);
+        hash = 31 * hash + Objects.hashCode(this.descricao);
+        hash = 31 * hash + Objects.hashCode(this.ciclos);
+        hash = 31 * hash + Objects.hashCode(this.dias);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Componente other = (Componente) obj;
+        if (!Objects.equals(this.pn, other.pn)) {
+            return false;
+        }
+        if (!Objects.equals(this.sn, other.sn)) {
+            return false;
+        }
+        if (!Objects.equals(this.horas, other.horas)) {
+            return false;
+        }
+        if (!Objects.equals(this.descricao, other.descricao)) {
+            return false;
+        }
+        if (!Objects.equals(this.ciclos, other.ciclos)) {
+            return false;
+        }
+        if (!Objects.equals(this.dias, other.dias)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
 }
